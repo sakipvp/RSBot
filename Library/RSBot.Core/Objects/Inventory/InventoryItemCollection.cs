@@ -439,9 +439,9 @@ namespace RSBot.Core.Objects
             sourceItem.Slot = destinationSlot;
             inventory.Add(sourceItem);
 
-            RemoveAt(sourceItem.Slot);
+            RemoveAt(sourceSlot);
 
-            Log.Debug($"[InventoryItemCollection::MoveTo] Move item {sourceItem.Record.GetRealName()} (slot={sourceSlot}) to storage (slot={destinationSlot}");
+            Log.Debug($"[InventoryItemCollection::MoveTo] Move item {sourceItem.Record.GetRealName()} (slot={sourceSlot}) to another inventory (slot={destinationSlot}");
         }
     }
 }
