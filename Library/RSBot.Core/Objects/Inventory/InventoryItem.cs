@@ -343,5 +343,11 @@ namespace RSBot.Core.Objects
 
             return true;
         }
+
+        /// <summary>
+        /// Creates a shallow copy of this with <see cref="object.MemberwiseClone()"/>.
+        /// </summary>
+        /// <returns>The shallow copy of this.</returns>
+        public InventoryItem ShallowCopy() => (InventoryItem)MemberwiseClone();
     }
 }
